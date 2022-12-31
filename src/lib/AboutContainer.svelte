@@ -3,6 +3,7 @@
 
     const setTheme = theme_number => {
         theme = theme_number
+        document.querySelector('main').style.setProperty("--img-translate", `${theme_number * -100}%`)
     }
 </script>
 
@@ -21,7 +22,8 @@
       {/if}
       {#if theme === 1}
         <h1>My works</h1>
-        <p>I've released songs on many platforms such as <a href="https://cricrillos.bandcamp.com/" target="_blank" rel="noreferrer">Bandcamp</a>, <a href="https://open.spotify.com/artist/3gZ8L09RcDxRCciQsJcFpU?si=GNf-y-PcSDmHtqmJj3ukRQ" target="_blank" rel="noreferrer">Spotify</a>, <a href="https://music.apple.com/us/artist/el-cri-cri/1628118044" target="_blank" rel="noreferrer">Apple Music</a>, and <a href="https://www.youtube.com/channel/UCeiqfcfLGcq46Xxw-1-js_w" target="_blank" rel="noreferrer">YouTube</a>, and you can hear my latest album <i>Haikus to Myself</i> on all of them. Personally, my favorite song is Efimera</p>
+        <p>I've released songs on <a href="https://cricrillos.bandcamp.com/" target="_blank" rel="noreferrer">Bandcamp</a>, <a href="https://open.spotify.com/artist/3gZ8L09RcDxRCciQsJcFpU?si=GNf-y-PcSDmHtqmJj3ukRQ" target="_blank" rel="noreferrer">Spotify</a>, <a href="https://music.apple.com/us/artist/el-cri-cri/1628118044" target="_blank" rel="noreferrer">Apple Music</a>, and <a href="https://www.youtube.com/channel/UCeiqfcfLGcq46Xxw-1-js_w" target="_blank" rel="noreferrer">YouTube</a>, and you can hear my latest album <i>Haikus to Myself</i> on all of them.</p>
+        <p>If you are wondering what song to listen to first, I would recommend Efimera, my personal favorite.</p>
         <iframe title="efimera" src="https://open.spotify.com/embed/track/2nM8yV6i1lxblX0EWirhmV?utm_source=generator" width="100%" height="130" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       {/if}
       {#if theme === 2}
@@ -32,12 +34,31 @@
 </section>
 
 <style>
-    #about-container {
-    width: calc((672 / 1440) * 100%);
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
+  }
+  @keyframes slide-from-bottom {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  #about-container {
+    width: calc((672 / 1440) * 100vw);
     height: 100vh;
 
     display: flex;
     flex-direction: column;
+    transform: translateY(100%);
+    animation: slide-from-bottom var(--loading-speed) ease calc(var(--loading-delay) + 0.5s) forwards;
   }
   #navbar-wrapper {
     padding: 0 2rem;
@@ -72,10 +93,9 @@
   #info-container {
     max-width: 672px;
     margin: auto;
-    overflow: hidden;
     padding: 2rem;
   }
-  #info-container > * {
+  #info-container > *:not(#info-blanket) {
     animation: fade-in 700ms linear forwards;
   }
   #info-container h1 {
@@ -83,17 +103,16 @@
   }
   #info-container p {
     padding-left: 1rem;
-    overflow: hidden;
   }
   #info-container a {
     color: rgb(183, 26, 239);
     text-decoration-color: rgb(183, 26, 239);
-    transition: 400ms ease;
+    transition: text-decoration-color 400ms ease, color 400ms ease;
   }
   #info-container a:hover {
     color: red;
     text-decoration-color: red;
-    transition: 400ms ease;
+    transition: text-decoration-color 400ms ease, color 400ms ease;
   }
   #info-container iframe {
     margin-top: 1.1rem;
