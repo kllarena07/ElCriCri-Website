@@ -3,7 +3,7 @@
 This template should help get you started developing with Svelte and TypeScript in Vite.
 
 ## Recommended IDE Setup
-s
+
 [VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
 
 ## Need an official Svelte framework?
