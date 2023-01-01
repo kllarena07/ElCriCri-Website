@@ -2,33 +2,27 @@
   import pic_theme_0 from '../assets/pic-theme-0.jpeg'
   import pic_theme_1 from '../assets/pic-theme-1.jpeg'
   import pic_theme_2 from '../assets/pic-theme-2.jpeg'
+  import pic_theme_3 from '../assets/pic-theme-3.jpeg'
   import pic_theme_4 from '../assets/pic-theme-4.jpeg'
-  import pic_theme_5 from '../assets/pic-theme-5.jpeg'
+
+  export let selected_theme
 </script>
 
-<section id="slideshow-container">
+<section id="slideshow-container" style="--img-translate: { selected_theme * -100}%">
   <div class="img-wrapper">
     <img src={pic_theme_0} alt="cri cri theme 0" />
   </div>
   <div class="img-wrapper">
     <img class="desktop-img" src={pic_theme_1} alt="cri cri theme 1" />
-    <img class="mobile-img" src={pic_theme_4} alt="cri cri theme 4" />
+    <img class="mobile-img" src={pic_theme_3} alt="cri cri theme 3" />
   </div>
   <div class="img-wrapper">
     <img class="desktop-img" src={pic_theme_2} alt="cri cri theme 2" />
-    <img class="mobile-img" src={pic_theme_5} alt="cri cri theme 3" />
+    <img class="mobile-img" src={pic_theme_4} alt="cri cri theme 4" />
   </div>
 </section>
 
 <style>
-  @keyframes slide-from-top {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-  }
   #slideshow-container {
     width: calc((768 / 1440) * 100vw);
     --img-translate: -0%;

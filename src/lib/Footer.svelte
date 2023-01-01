@@ -7,7 +7,6 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    font-family: 'Source Code Pro', monospace;
     font-size: 10px;
     color: white;
     padding: 0 1rem;

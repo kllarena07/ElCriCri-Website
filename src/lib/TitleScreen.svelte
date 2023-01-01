@@ -1,35 +1,23 @@
+<script lang="ts">
+  import { createEventDispatcher } from "svelte";
+
+  const dispatch = createEventDispatcher()
+
+  function loadWebsite() {
+    dispatch('load_website', {
+      load_condition: true
+    })
+  }
+</script>
+
 <section id="title-screen">
   <div id="title-btn-wrapper">
-    <button>Discover &#8594</button>
+    <button on:click={loadWebsite}>Discover &#8594</button>
   </div>
   <h1>Who is El Cri Cri?</h1>
 </section>
 
 <style>
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 100;
-    }
-  }
-  @keyframes grow-bigger {
-    from {
-      transform: scale(0.95)
-    }
-    to {
-      transform: scale(1)
-    }
-  }
-  @keyframes step-in-from-left {
-    from {
-      transform: translateX(-10%);
-    }
-    to {
-      transform: translateX(0%);
-    }
-  }
   #title-screen {
     width: 100vw;
     height: 100vh;
