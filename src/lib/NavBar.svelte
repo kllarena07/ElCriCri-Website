@@ -1,22 +1,18 @@
 <script lang="ts">
-  import { createEventDispatcher } from "svelte";
-  
-  const dispatch = createEventDispatcher()
+  export let theme = 0
 
-  let theme = 0
-  const setTheme = theme_number => {
-    theme = theme_number
-    dispatch('theme_change', {
-      selected_theme: theme
-    })
-  }
+  const navBtns = [
+    { name: 'about', theme: 0 },
+    { name: 'work', theme: 1 },
+    { name: 'contact', theme: 2 },
+  ]
 </script>
 
 <div id='navbar-wrapper'>
   <nav id='navbar'>
-      <button class="nav-btn" class:nav-btn-selected="{theme === 0}" on:click={() => { setTheme(0) }}>about</button>
-      <button class="nav-btn" class:nav-btn-selected="{theme === 1}" on:click={() => { setTheme(1) }}>work</button>
-      <button class="nav-btn" class:nav-btn-selected="{theme === 2}" on:click={() => { setTheme(2) }}>contact</button>
+    {#each navBtns as btn}
+      <button class="nav-btn" class:nav-btn-selected="{theme === btn.theme}" on:click={() => theme = btn.theme}>{btn.name}</button>
+    {/each}
   </nav>
 </div>
 

@@ -5,10 +5,10 @@
   import pic_theme_3 from '../assets/pic-theme-3.jpeg'
   import pic_theme_4 from '../assets/pic-theme-4.jpeg'
 
-  export let selected_theme
+  export let selectedTheme = 0;
 </script>
 
-<section id="slideshow-container" style="--img-translate: { selected_theme * -100}%">
+<section id="slideshow-container" style="--img-translate: { selectedTheme * -100}%">
   <div class="img-wrapper">
     <img src={pic_theme_0} alt="cri cri theme 0" />
   </div>
