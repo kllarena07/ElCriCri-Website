@@ -8,12 +8,12 @@
   import InfoContainer from './lib/InfoContainer.svelte';
 
   let website_loaded = false
-  function handleWebsiteLoad(evt) {
+  const handleWebsiteLoad = evt => {
     website_loaded = evt.detail.load_condition
   }
 
   let theme = 0
-  function handleThemeChange(evt) {
+  const handleThemeChange = evt => {
     theme = evt.detail.selected_theme
   }
 </script>
