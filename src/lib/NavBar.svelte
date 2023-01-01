@@ -4,7 +4,7 @@
   const dispatch = createEventDispatcher()
 
   let theme = 0
-  function setTheme(theme_number) {
+  const setTheme = theme_number => {
     theme = theme_number
     dispatch('theme_change', {
       selected_theme: theme
