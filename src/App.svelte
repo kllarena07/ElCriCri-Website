@@ -66,7 +66,7 @@
     align-items: center;
   }
   #loading-screen h1 {
-    font-size: 3vw;
+    font-size: clamp(2rem, 5rem, 3vw);
     opacity: 0;
     animation: fade-in 2s ease 1s forwards, grow-bigger 2s ease 1s forwards;
     margin-bottom: 1.5rem;
@@ -79,12 +79,12 @@
   #loading-btn-wrapper button {
     font-family: 'Source Code Pro', monospace;
     padding: .5rem .7rem;
-    font-size: clamp(.2rem, 1rem, 2.5vw);
+    font-size: 1.15rem;
     font-style: italic;
     border: none;
     background-color: white;
     color: black;
-    transition: 800ms ease;
+    transition: transform 800ms ease;
   }
   #loading-btn-wrapper:hover button {
     transform: scale(1.1);
@@ -93,5 +93,11 @@
   #loading-btn-wrapper:hover + h1 {
     text-shadow: #FC0 1px 0 7px;
     transition: text-shadow 500ms ease;
+  }
+
+  @media screen and (max-width: 1113px) {
+    #loading-btn-wrapper button {
+      font-size: .8rem;
+    }
   }
 </style>

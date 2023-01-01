@@ -117,4 +117,15 @@
   #info-container iframe {
     margin-top: 1.1rem;
   }
+
+  @media screen and (max-width: 768px) {
+    #about-container {
+      width: 100vw;
+      height: 100vh;
+      background-color: transparent;
+    }
+    #info-container {
+      transform: translateY(14%);
+    }
+  }
 </style>
