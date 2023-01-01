@@ -1,18 +1,10 @@
 <script lang="ts">
-  import { createEventDispatcher } from "svelte";
-
-  const dispatch = createEventDispatcher()
-
-  function loadWebsite() {
-    dispatch('load_website', {
-      load_condition: true
-    })
-  }
+  export let websiteLoaded = false;
 </script>
 
 <section id="title-screen">
   <div id="title-btn-wrapper">
-    <button on:click={loadWebsite}>Discover &#8594</button>
+    <button on:click={() => websiteLoaded = true}>Discover &#8594</button>
   </div>
   <h1>Who is El Cri Cri?</h1>
 </section>

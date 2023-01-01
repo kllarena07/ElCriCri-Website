@@ -7,26 +7,19 @@
   import NavBar from './lib/NavBar.svelte';
   import InfoContainer from './lib/InfoContainer.svelte';
 
-  let website_loaded = false
-  const handleWebsiteLoad = evt => {
-    website_loaded = evt.detail.load_condition
-  }
-
+  let websiteLoaded = false
   let theme = 0
-  const handleThemeChange = evt => {
-    theme = evt.detail.selected_theme
-  }
 </script>
 
 <main>
-  {#if website_loaded}
-    <SlideshowContainer selected_theme={theme} />
+  {#if websiteLoaded}
+    <SlideshowContainer selectedTheme={theme} />
     <AboutContainer>
-      <NavBar on:theme_change={handleThemeChange} />
-      <InfoContainer selected_theme={theme} />
+      <NavBar bind:theme={theme} />
+      <InfoContainer selectedTheme={theme} />
     </AboutContainer>
   {:else}
-    <TitleScreen on:load_website={handleWebsiteLoad} />
+    <TitleScreen bind:websiteLoaded={websiteLoaded} />
   {/if}
 </main>
 <Footer />
