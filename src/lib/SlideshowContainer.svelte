@@ -1,38 +1,38 @@
 <script lang="ts">
-  import pic_theme_0 from '../assets/pic-theme-0.jpeg'
-  import pic_theme_1 from '../assets/pic-theme-1.jpeg'
-  import pic_theme_2 from '../assets/pic-theme-2.jpeg'
-  import pic_theme_3 from '../assets/pic-theme-3.jpeg'
-  import pic_theme_4 from '../assets/pic-theme-4.jpeg'
+  import picTheme0 from '../assets/pic-theme-0.jpeg'
+  import picTheme1 from '../assets/pic-theme-1.jpeg'
+  import picTheme2 from '../assets/pic-theme-2.jpeg'
+  import picTheme3 from '../assets/pic-theme-3.jpeg'
+  import picTheme4 from '../assets/pic-theme-4.jpeg'
 
   export let selectedTheme = 0;
 </script>
 
-<section id="slideshow-container" style="--img-translate: { selectedTheme * -100}%">
-  <div class="img-wrapper">
-    <img src={pic_theme_0} alt="cri cri theme 0" />
+<section id="slideshowContainer" style="--img-translate: { selectedTheme * -100}%">
+  <div class="slideshowImgWrapper">
+    <img src={picTheme0} alt="cri cri theme 0" />
   </div>
-  <div class="img-wrapper">
-    <img class="desktop-img" src={pic_theme_1} alt="cri cri theme 1" />
-    <img class="mobile-img" src={pic_theme_3} alt="cri cri theme 3" />
+  <div class="slideshowImgWrapper">
+    <img class="slideshowDesktopImg" src={picTheme1} alt="cri cri theme 1" />
+    <img class="slideshowMobileImg" src={picTheme3} alt="cri cri theme 3" />
   </div>
-  <div class="img-wrapper">
-    <img class="desktop-img" src={pic_theme_2} alt="cri cri theme 2" />
-    <img class="mobile-img" src={pic_theme_4} alt="cri cri theme 4" />
+  <div class="slideshowImgWrapper">
+    <img class="slideshowDesktopImg" src={picTheme2} alt="cri cri theme 2" />
+    <img class="slideshowMobileImg" src={picTheme4} alt="cri cri theme 4" />
   </div>
 </section>
 
 <style>
-  #slideshow-container {
+  #slideshowContainer {
     width: calc((768 / 1440) * 100vw);
     --img-translate: -0%;
 
     display: flex;
     overflow: hidden;
     transform: translateY(-100%);
-    animation: slide-from-top 2.25s ease 1.5s forwards;
+    animation: slideFromTop 2.25s ease 1.5s forwards;
   }
-  .img-wrapper {
+  .slideshowImgWrapper {
     width: calc((768 / 1440) * 100vw);
     height: 100vh;
     object-fit: cover;
@@ -40,28 +40,28 @@
     flex: 0 0 auto;
     transition: transform 800ms ease;
   }
-  .img-wrapper img {
+  .slideshowImgWrapper img {
     width: 100%;
     height: 100%;
   }
-  .mobile-img {
+  .slideshowMobileImg {
     display: none;
   }
 
   @media screen and (max-width: 768px) {
-    #slideshow-container {
+    #slideshowContainer {
       position: absolute;
       width: 100vw;
       height: 100vh;
     }
-    .img-wrapper {
+    .slideshowImgWrapper {
       width: 100vw;
       object-fit: cover;
     }
-    .desktop-img {
+    .slideshowDesktopImg {
       display: none;
     }
-    .mobile-img {
+    .slideshowMobileImg {
       display: block;
     }
   }

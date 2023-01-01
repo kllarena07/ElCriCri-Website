@@ -2,7 +2,7 @@
   export let selectedTheme = 0;
 </script>
 
-<div id='info-container'>
+<div id='infoContainer'>
   {#if selectedTheme === 0}
     <h1>Who I am</h1>
     <p>My name is Adrian Corrales. I'm from Mexico, and I really just love music, all of it.</p>
@@ -18,35 +18,35 @@
 </div>
 
 <style>
-  #info-container {
+  #infoContainer {
     max-width: 672px;
     margin: auto;
     padding: 2rem;
   }
-  #info-container > *:not(#info-blanket) {
-    animation: fade-in 700ms linear forwards;
+  #infoContainer > * {
+    animation: fadeIn 700ms linear forwards;
   }
-  #info-container h1 {
+  #infoContainer h1 {
     font-size: 2.5rem;
   }
-  #info-container p {
+  #infoContainer p {
     padding-left: 1rem;
   }
-  #info-container a {
+  #infoContainer a {
     color: rgb(183, 26, 239);
     text-decoration-color: rgb(183, 26, 239);
     transition: text-decoration-color 400ms ease, color 400ms ease;
   }
-  #info-container a:hover {
+  #infoContainer a:hover {
     color: red;
     text-decoration-color: red;
     transition: text-decoration-color 400ms ease, color 400ms ease;
   }
-  #info-container iframe {
+  #infoContainer iframe {
     margin-top: 1.1rem;
   }
   @media screen and (max-width: 768px) {
-    #info-container {
+    #infoContainer {
       transform: translateY(14%);
     }
   }

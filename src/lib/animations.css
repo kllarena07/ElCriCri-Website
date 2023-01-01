@@ -1,4 +1,4 @@
-@keyframes fade-in {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -6,7 +6,7 @@
     opacity: 100;
   }
 }
-@keyframes slide-from-top {
+@keyframes slideFromTop {
   from {
       transform: translateY(-100%);
   }
@@ -14,7 +14,7 @@
       transform: translateY(0);
   }
 }
-@keyframes slide-from-bottom {
+@keyframes slideFromBottom {
   from {
     transform: translateY(100%);
   }
@@ -22,7 +22,7 @@
     transform: translateY(0);
   }
 }
-@keyframes grow-bigger {
+@keyframes growBigger {
   from {
     transform: scale(0.95)
   }
@@ -30,7 +30,7 @@
     transform: scale(1)
   }
 }
-@keyframes step-in-from-left {
+@keyframes stepInFromLeft {
   from {
     transform: translateX(-10%);
   }

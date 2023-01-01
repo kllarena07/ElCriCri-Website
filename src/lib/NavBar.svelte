@@ -8,16 +8,16 @@
   ]
 </script>
 
-<div id='navbar-wrapper'>
+<div id='navbarWrapper'>
   <nav id='navbar'>
     {#each navBtns as btn}
-      <button class="nav-btn" class:nav-btn-selected="{theme === btn.theme}" on:click={() => theme = btn.theme}>{btn.name}</button>
+      <button class="navBtn" class:navBtnSelected="{theme === btn.theme}" on:click={() => theme = btn.theme}>{btn.name}</button>
     {/each}
   </nav>
 </div>
 
 <style>
-  #navbar-wrapper {
+  #navbarWrapper {
     padding: 0 2rem;
   }
   #navbar {
@@ -30,17 +30,17 @@
     border-top: 2px solid white;
     padding: 1rem 2.5rem 0 2.5rem;
   }
-  .nav-btn {
+  .navBtn {
     background-color: transparent;
     border: none;
     font-size: 1rem;
     color: white;
     transition: background-color 100ms ease;
   }
-  .nav-btn:not(.nav-btn-selected):hover {
+  .navBtn:not(.navBtnSelected):hover {
     background-color: rgb(108, 108, 108);
   }
-  .nav-btn-selected {
+  .navBtnSelected {
     background-color: white;
     color: black;
   }
