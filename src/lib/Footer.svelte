@@ -1,5 +1,5 @@
 <footer>
-  <span>Website created by <a href="https://www.linkedin.com/in/kllarena07/" target="_blank" rel="noreferrer">kllarena07</a></span>
+  <span>Made by <a href="https://www.linkedin.com/in/kllarena07/" target="_blank" rel="noreferrer">kllarena07</a></span>
 </footer>
   
 <style>
