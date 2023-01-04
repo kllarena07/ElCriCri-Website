@@ -4,7 +4,7 @@
   export let selectedTheme = 0;
 </script>
 
-<div id='infoContainer'>
+<div id='info-container'>
   <ThemeContainer themeNumber={0} selectedTheme={selectedTheme}>
     <h1>Who I am</h1>
     <p>My name is Adrian Corrales. I'm from Mexico, and I really just love music, all of it.</p>
@@ -24,35 +24,35 @@
 </div>
 
 <style>
-  #infoContainer {
+  #info-container {
     max-width: 672px;
     margin: auto;
     padding: 2rem;
   }
-  #infoContainer > * {
+  #info-container > * {
     animation: fadeIn 700ms linear forwards;
   }
-  #infoContainer h1 {
+  #info-container h1 {
     font-size: 2.5rem;
   }
-  #infoContainer p {
+  #info-container p {
     padding-left: 1rem;
   }
-  #infoContainer a {
+  #info-container a {
     color: rgb(183, 26, 239);
     text-decoration-color: rgb(183, 26, 239);
     transition: text-decoration-color 400ms ease, color 400ms ease;
   }
-  #infoContainer a:hover {
+  #info-container a:hover {
     color: red;
     text-decoration-color: red;
     transition: text-decoration-color 400ms ease, color 400ms ease;
   }
-  #infoContainer iframe {
+  #info-container iframe {
     margin-top: 1.1rem;
   }
   @media screen and (max-width: 768px) {
-    #infoContainer {
+    #info-container {
       transform: translateY(14%);
     }
   }

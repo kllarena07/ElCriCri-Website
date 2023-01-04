@@ -1,9 +1,9 @@
-<section id="aboutContainer">
+<section id="about-container">
   <slot></slot>
 </section>
 
 <style>
-  #aboutContainer {
+  #about-container {
     width: calc((672 / 1440) * 100vw);
     height: calc(100vh - 32px);
 
@@ -14,7 +14,7 @@
   }
 
   @media screen and (max-width: 768px) {
-    #aboutContainer {
+    #about-container {
       width: 100vw;
       height: 100vh;
       background-color: transparent;
