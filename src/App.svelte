@@ -7,7 +7,7 @@
   import NavBar from './lib/NavBar.svelte';
   import InfoContainer from './lib/InfoContainer.svelte';
 
-  let websiteLoaded = false
+  let websiteLoaded = true
   let theme = 0
 </script>
 
